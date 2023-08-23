@@ -21,8 +21,8 @@ start_time=$(date +%Y.%m.%d-%I_%M)
 
 start_time_sum=$(date +%s)
 
-make ARCH=arm64 O=out CC=clang op6-perf_ksu_defconfig
-make ARCH=arm64 O=out CC=clang oldconfig
+make ARCH=arm64 O=out CC=clang mcd_ksu_defconfig
+# make ARCH=arm64 O=out CC=clang oldconfig
 # 定义编译线程数
 make ARCH=arm64 O=out CC=clang -j12 2>&1 | tee kernel_log-${start_time}.txt
 
