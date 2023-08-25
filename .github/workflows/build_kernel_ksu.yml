@@ -49,8 +49,8 @@ jobs:
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
         bash build_kernel_github.sh
 
-    - name: Upload Kernel-SU
+    - name: Upload Kernel-with KernelSU
       uses: actions/upload-artifact@v3
       with:
-        name: NGK-dipper-KSU-${{ steps.get_time.outputs.TIME }}
+        name: MCD_ONEPLUS6_Series_Kernel-${{ steps.get_time.outputs.TIME }}
         path: "tools/AnyKernel3/*"
